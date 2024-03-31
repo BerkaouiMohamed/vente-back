@@ -1,0 +1,11 @@
+const orderController = require('../contorllers/orderControllers')
+const verifToken = require('../middelwares/verifToken')
+const orderRouter = require('express').Router()
+orderRouter.route('/')
+.get(verifToken,orderController.getAllOrders)
+.post(orderController.createOrder)
+orderRouter.route('/:id')
+.get(verifToken,orderController.getSingleOrder)
+.put(verifToken,orderController.editOrder) 
+.delete(verifToken,orderController.deleteOrder)
+module.exports = orderRouter 
