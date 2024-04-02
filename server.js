@@ -13,11 +13,11 @@ app.use(express.static(path.join(__dirname,'uploads')))
 DBConnnection()
 app.use(express.json())
 app.post('/api/login',require('./contorllers/authControllers'))
-app.use('/api/products',require('./routers/productRouter'))
+app.use('/api/products',require('./routers/productRouter')) 
 app.use('/api/orders',require('./routers/orderRouter')) 
 
-
-app.all('*',(req,res,next)=>{
+  
+app.all('*',(req,res,next)=>{ 
     next(appError('Page not found'))
 })
 app.use((error,req,res,next)=>{

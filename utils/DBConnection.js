@@ -7,7 +7,7 @@ const DBConnnection =  () => {
     })  
     .then(() => {
         console.log("Connected to MongoDB");
-    })
+    })   
     .catch((error) => {
         console.log(error); 
     })}

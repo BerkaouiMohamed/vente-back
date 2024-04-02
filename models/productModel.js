@@ -16,7 +16,10 @@ const productSchema = new Schema({
         
    
     },
-
+    color : {
+        type : String,
+        required : true
+    },
     images : {
         type : [String],
         required : true
@@ -26,8 +29,11 @@ const productSchema = new Schema({
         required : true,
     enum:["tshirt" , "pant" ,"dress", "shoes","bag"],
 },
+status : {
+    type : Boolean,
+    default : true
+}
 },
-
 {
     timestamps : true
 })
