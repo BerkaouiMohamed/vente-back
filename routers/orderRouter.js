@@ -8,4 +8,4 @@ orderRouter.route('/:id')
 .get(verifToken,orderController.getSingleOrder)
 .put(verifToken,orderController.editOrder) 
 .delete(verifToken,orderController.deleteOrder)
-module.exports = orderRouter 
+module.exports = orderRouter  

@@ -11,7 +11,7 @@ const orderSchema = new Schema({
         type : [{type : Schema.Types.ObjectId, ref : "Product", required : true}],
         required : true
     },
-    user :{type: {name : String,lastNAme : String, email : String, phone : Number, address : String},required:true}
+    user :{type: {name : {type : String, required : true},lastNAme : String, email : {type:String , required : true}, phone : {type:Number , required : true}, address : {type:String , required : true}},required:true}
     ,
     status : {
         type : String,

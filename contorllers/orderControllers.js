@@ -13,7 +13,7 @@ const orderController = {
         
     }),
     getSingleOrder: asyncWrapper(async (req, res) => {
-        const order = await orderModel.findById(req.params.id)
+        const order = await orderModel.findById(req.params.id).populate('products')
         res.status(200).json({status: "success",data : order})
         
     }),
